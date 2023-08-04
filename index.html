@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Ticket Booking Registration</title>
+    <style>
+        body{
+            background-image: url('logo1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+        table, th, td {
+            border: 3px solid black;
+            border-collapse: collapse;
+            background-color: yellowgreen;
+          }
+        
+    </style>
+</head>
+<body align="center"><center>
+ <u><b><font color="darkblue"> <h1>Online Ticket Booking</h1></font></b></u>
+    <table><th>
+    <form action="submit_registration.php" method="POST">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required><br><br>
+
+        <label for="email">Email:         </label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:  </label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="movie">Select Movie:   </label>
+        <select id="movie" name="movie" required>
+            <option value="">-- Select Movie --</option>
+            
+            <optgroup label="Thriller">
+                <option value="virupaksha">virupaksha</option>
+                <option value="HIT-2">HIT-2</option>
+                <option value="Hidima">Hidimba</option>
+            </optgroup>
+
+                <optgroup label="Comedy">
+                
+                <option value="samajavaragamana ">samajavaragamana</option>
+                <option value="BRo">BRO</option>
+                <option value="Jathiratnalu">Jathiratnalu</option>
+                </optgroup>
+
+                a<optgroup label="Drama">
+                
+                    <option value="Balagam">Balagam</option>
+                    <option value="BRo">Bahubali</option>
+                    <option value="Jathiratnalu">RRR</option>
+                    </optgroup>
+
+                    <optgroup label="Action">
+                
+                        <option value="mission impossible ">mission impossible </option>
+                        <option value="Saaho">Saaho</option>
+                        <option value="WAR">WAR</option>
+                        </optgroup>
+
+                        <optgroup label="Sci-fi">
+                
+                            <option value="Interstellar ">Interstellar </option>
+                            <option value="project-k">project-k</option>
+                            <option value="Gravity">Gravity</option>
+                            </optgroup>    </select><br><br>
+                            
+
+        <label for="ticket-type">Ticket Type:</label>
+        <input type="radio" id="regular" name="ticket-type" value="regular" required>
+        <label for="regular">Regular</label>
+        <input type="radio" id="vip" name="ticket-type" value="vip">
+        <label for="vip">VIP</label><br><br>
+
+    
+
+
+        <label for="date">Select Date:     </label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Select Time:     </label>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="num_tickets">Number of Tickets:</label>
+        <input type="number" id="num_tickets" name="num_tickets" min="1" required><br><br>
+
+        <label for="seat-preference">Seat Preference:</label>
+        <input type="radio" id="window" name="seat-preference" value="window">
+        <label for="window">Upper</label>
+        <input type="radio" id="aisle" name="seat-preference" value="aisle">
+        <label for="aisle">Middle</label>
+        <input type="radio" id="middle" name="seat-preference" value="middle">
+        <label for="middle">Lower</label>
+        <br><br>
+
+        
+
+        <label for="movie">Select payment method:   </label>
+        <select id="movie" name="movie" required>
+            <option value="">--choose one--</option>
+            
+            
+                <option value="NET BANKING">NET BANKING</option>
+                <option value="CREDIT CARD">CREDIT CARD</option>
+                <option value="DEBIT CARD">DEBIT CARD</option>
+                <option value="UPI">UPI</option>
+        </select><br><br>
+        <label for="promo-code">Promo Code:</label>
+        <input type="text" id="promo-code" name="promo-code">
+        <br><br>
+
+        <label for="captcha">Please solve the captcha below:</label>
+        <!-- Add a simple math captcha for user verification -->
+        <div id="captcha">
+            <span id="num1"></span>8 +12 <span id="num2"></span> =
+            <input type="number" id="captcha-input" name="captcha-input" required>
+        </div>
+        <br>
+        <button type="button" onclick="generateCaptcha()">Generate New Captcha</button>
+        <br><br>
+        
+        <label for="agree-terms">
+            <input type="checkbox" id="agree-terms" name="agree-terms" required>
+            I agree to the Terms and Conditions
+        </label>  <br><br>
+
+        
+
+        <input type="reset" value="Cancel">
+        <input type="submit" value="Book Tickets">
+    </form>
+</th></table>
+
+    
+</body></center>
+</html>
